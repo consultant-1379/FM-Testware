@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Alarm>
+		<Notification>Error</Notification>	
+	    <FDN>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST,MeContext=RNC_TEST</FDN>
+    	<EventTime>20121126203006</EventTime>
+    	<Severity>1</Severity>
+    	<SpecificProblem>SPEC</SpecificProblem>
+    	<ProbableCause>PCEC</ProbableCause>
+    	<EventType>ETEC</EventType>   
+		<NumId>1009</NumId>
+		<StringId>StringId9</StringId>
+		<SourceType>URAN</SourceType>
+</Alarm>

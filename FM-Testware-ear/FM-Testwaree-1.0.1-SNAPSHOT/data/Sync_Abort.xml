@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Alarm>
+		<Notification>Sync_Abort</Notification>	
+	    <FDN>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST,MeContext=RNC_TEST</FDN>
+	    <Severity>0</Severity>
+</Alarm>

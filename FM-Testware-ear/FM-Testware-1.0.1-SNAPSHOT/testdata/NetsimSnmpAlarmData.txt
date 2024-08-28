@@ -1,0 +1,8 @@
+/*This file is used to provide the test Data to the Testcase.This data in this file is read from TestDataProvider class and
+the data is provided to the Testcase.Data that is to be provided to the testcase must end with semicolon.
+The Data is of the format IPAddress#NodeNameinNetsim#SimulationName#NEType#FDN terminated with semicolon.
+*/ 
+WPP#SubNetwork=ONRM_ROOT_MO,SubNetwork=TAF_WPP,ManagedElement=TAFWPP#TAFTEST#TAFWPP;
+
+
+

@@ -1,0 +1,24 @@
+<suite name="Suite">
+	<listeners>
+		<listener class-name="se.ericsson.jcat.fw.ng.listeners.JcatTestListener" />
+		<listener class-name="se.ericsson.jcat.fw.ng.listeners.JcatSuiteListener" />
+		<listener class-name="com.ericsson.cifwk.taf.TorNgSuiteListener" />
+	</listeners>
+
+
+	<!-- This is a comment in the suite.xml file -->
+	<test name="TAFFIT_base" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.fmtest.test.cases.NetsimAlarms" />
+			<class name="com.ericsson.fmtest.test.cases.NodeSuspend" />
+			<class name="com.ericsson.fmtest.test.cases.AlarmAck" />
+			<class name="com.ericsson.fmtest.test.cases.AlarmSynchronization" />
+			<class name="com.ericsson.fmtest.test.cases.SyncAlarms" />
+			<class name="com.ericsson.fmtest.test.cases.FMSupervision" />
+			<class name="com.ericsson.fmtest.test.cases.HeartBeat" />
+			<class name="com.ericsson.fmtest.test.cases.HeartBeatBasic" />
+			
+		</classes>
+	</test>
+</suite>
+

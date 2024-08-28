@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Alarm>
+		<Notification>Sync_Event</Notification>		
+	    <FDN>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST,MeContext=RNC_TEST</FDN>
+    	<EventTime>20121126203006</EventTime>
+    	<Severity>1</Severity>
+    	<SpecificProblem>SPSC</SpecificProblem>
+    	<ProbableCause>PCSC</ProbableCause>
+    	<EventType>ETSC</EventType>   
+		<NumId>1012</NumId>
+		<StringId>StringId12</StringId>
+		<SourceType>URAN</SourceType>
+</Alarm>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Clear_All>	
+		<Notification>Clear_All</Notification>
+	    <FDN>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST,MeContext=RNC_TEST</FDN>
+	    <Severity>5</Severity>
+		<!--  <TOPMO>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST</TOPMO> -->
+</Clear_All>

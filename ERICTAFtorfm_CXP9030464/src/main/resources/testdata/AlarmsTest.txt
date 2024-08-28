@@ -1,0 +1,25 @@
+/*This file is used to provide the test Data to the Testcase.This data in this file is read from TestDataProvider class and
+the data is provided to the Testcase.Data that is to be provided to the testcase must end with semicolon.
+The Data is of format path_of_xml terminated with semicolon.
+*/ 
+src\\main\\resources\\data\\Alarm_CRITICAL.xml;
+src\\main\\resources\\data\\Alarm_INTERMEDIATE.xml;
+src\\main\\resources\\data\\Alarm_MAJOR.xml;
+src\\main\\resources\\data\\Alarm_MINOR.xml;
+src\\main\\resources\\data\\Alarm_Warning.xml;
+src\\main\\resources\\data\\Clear_CRITICAL.xml;
+src\\main\\resources\\data\\Clear_Intermediate.xml;
+src\\main\\resources\\data\\Clear_Major.xml;
+src\\main\\resources\\data\\Clear_Minor.xml;
+src\\main\\resources\\data\\Clear_Warning.xml;
+src\\main\\resources\\data\\Error_Critical.xml;
+src\\main\\resources\\data\\Error_Intermediate.xml;
+src\\main\\resources\\data\\Error_Major.xml;
+src\\main\\resources\\data\\Error_Minor.xml;
+src\\main\\resources\\data\\Error_Warning.xml;
+src\\main\\resources\\data\\Node_Suspended.xml;
+src\\main\\resources\\data\\Sync_Event_Critical.xml;
+src\\main\\resources\\data\\Sync_Event_Intermediate.xml;
+src\\main\\resources\\data\\Sync_Event_major.xml;
+src\\main\\resources\\data\\Sync_Event_minor.xml;
+src\\main\\resources\\data\\Sync_Event_warning.xml;

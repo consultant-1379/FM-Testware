@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>FM-Testware</artifactId>
+		<groupId>com.ericsson.nms.services</groupId>
+		<version>1.1.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ERICTAFtorfm_CXP9030464</artifactId>
+	<packaging>jar</packaging>
+
+	<name>[${project.parent.artifactId}] JAR module</name>
+		<dependencyManagement>
+		<dependencies>
+			<!-- here we specify what version of Service Framework we want to use. 
+				All modules will be imported -->
+				<dependency>
+			<groupId>com.ericsson.cifwk</groupId>
+			<artifactId>ossrc-taf-sdk</artifactId>
+			<version>2.0.3</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ericsson.cifwk</groupId>
+			<artifactId>taf-netsim</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+			<dependency>
+				<groupId>com.ericsson.oss.itpf.sdk</groupId>
+				<artifactId>ServiceFrameworkBOM</artifactId>
+				<version>${version.service.framework}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.arquillian</groupId>
+				<artifactId>arquillian-bom</artifactId>
+				<version>${version.arquillian.bom}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	  <properties>
+          <taf_version>RELEASE</taf_version>
+    </properties>
+    
+	<dependencies>
+		<dependency>
+			<groupId>com.ericsson.cifwk</groupId>
+			<artifactId>ossrc-taf-sdk</artifactId>
+			<version>2.0.3</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ericsson.cifwk</groupId>
+			<artifactId>taf-netsim</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+
+	<plugins>
+		<plugin>
+			<artifactId>maven-dependency-plugin</artifactId>
+			<executions>
+				<execution>
+					<phase>install</phase>
+					<goals>
+						<goal>copy-dependencies</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${project.build.directory}/lib</outputDirectory>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<artifactId>maven-resources-plugin</artifactId>
+			<executions>
+				<execution>
+					<id>copy-taf-resources</id>
+					<!-- here the phase you need -->
+					<phase>compile</phase>
+					<configuration>
+						<outputDirectory>${basedir}/target</outputDirectory>
+						<resources>
+							<resource>
+								<directory>src/main/resources</directory>
+								<includes>
+									<include>**/*</include>
+								</includes>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-eclipse-compiler</artifactId>
+			<extensions>true</extensions>
+		</plugin>
+		
+	</plugins>
+	<pluginManagement>
+		<plugins>
+
+			<!--This plugin's configuration is used to store Eclipse m2e settings 
+				only. It has no influence on the Maven build itself. -->
+
+			<plugin>
+				<groupId>org.eclipse.m2e</groupId>
+				<artifactId>lifecycle-mapping</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<lifecycleMappingMetadata>
+						<pluginExecutions>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>org.apache.maven.plugins</groupId>
+									<artifactId>maven-dependency-plugin</artifactId>
+									<versionRange>[2.4,)</versionRange>
+									<goals>
+									<goal>analyze-dep-mgt</goal>
+										<goal>copy-dependencies</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+							</pluginExecution>
+							<pluginExecution>
+								<pluginExecutionFilter>
+									<groupId>com.ericsson.maven.plugins</groupId>
+									<artifactId>rstate-maven-plugin</artifactId>
+									<versionRange>[1.0,)</versionRange>
+									<goals>
+										<goal>rstate</goal>
+									</goals>
+								</pluginExecutionFilter>
+								<action>
+									<ignore />
+								</action>
+
+							</pluginExecution>
+
+							<pluginExecution>
+
+								<pluginExecutionFilter>
+
+									<groupId>
+
+										org.codehaus.groovy
+
+									</groupId>
+
+									<artifactId>
+
+										groovy-eclipse-compiler
+
+									</artifactId>
+
+									<versionRange>
+
+										[2.7.0-01,)
+
+									</versionRange>
+
+									<goals>
+
+										<goal>
+
+											add-groovy-build-paths
+
+										</goal>
+
+									</goals>
+
+								</pluginExecutionFilter>
+
+								<action>
+
+									<ignore />
+
+								</action>
+
+							</pluginExecution>
+
+						</pluginExecutions>
+
+					</lifecycleMappingMetadata>
+
+				</configuration>
+
+			</plugin>
+
+			<plugin>
+
+				<groupId>org.codehaus.mojo</groupId>
+
+				<artifactId>exec-maven-plugin</artifactId>
+
+				<version>1.1.1</version>
+
+				<executions>
+
+					<execution>
+
+						<id>some-execution</id>
+
+						<phase>install</phase>
+
+						<goals>
+
+							<goal>exec</goal>
+
+						</goals>
+
+					</execution>
+
+				</executions>
+
+				<configuration>
+
+					<executable>./target/scripts/FMTestStart.sh</executable>
+
+				</configuration>
+
+			</plugin>
+
+
+		</plugins>
+
+	</pluginManagement>
+
+</build>
+
+
+	
+	
+   
+   
+</project>

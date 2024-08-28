@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Alarm>	
+		<Notification>Alarm</Notification>
+	    <FDN>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST,MeContext=RNC_TEST</FDN>
+    	<EventTime>20121126203006</EventTime>
+    	<Severity>5</Severity>
+    	<SpecificProblem>SPInd</SpecificProblem>
+    	<ProbableCause>PCInd</ProbableCause>
+    	<EventType>ETInd</EventType>   
+		<NumId>1002</NumId>
+		<StringId>StringId2</StringId>
+		<SourceType>URAN</SourceType>
+</Alarm>

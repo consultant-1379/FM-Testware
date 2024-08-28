@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Alarm>	
+		<Notification>Alarm</Notification>
+	    <FDN>SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_TEST,MeContext=RNC_TEST</FDN>
+    	<EventTime>20121126203006</EventTime>
+    	<Severity>1</Severity>
+    	<SpecificProblem>SPCritical</SpecificProblem>
+    	<ProbableCause>PCCritical</ProbableCause>
+    	<EventType>ETCritical</EventType>   
+		<NumId>1001</NumId>
+		<StringId>StringId1</StringId>
+		<SourceType>URAN</SourceType>
+</Alarm>

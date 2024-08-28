@@ -1,0 +1,6 @@
+/*This file is used to provide the test Data to the Testcase.The data in this file is read from TestDataProvider class and
+the data is provided to the Testcase.Data that is to be provided to the testcase must end with semicolon.
+The Data is of the format SystemType#FDN#SimulationName#NodeName terminated with semicolon.
+*/ 
+
+LRAN#SubNetwork=ONRM_ROOT_MO,SubNetwork=TAFRNC01,MeContext=TAFRNC01,ManagedElement=1#TAFTEST#TAFRNC01;
